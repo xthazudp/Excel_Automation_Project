@@ -86,14 +86,14 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="1. Using workbook and datatable activity new column for estimated value is added to the existing excel file.&#xD;&#xA;&#xD;&#xA;2. Using excel activity we have to format the estimated value column into currency type, then create pivot table and chart" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,484" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="1. Using workbook and datatable activity new column for estimated value is added to the existing excel file.&#xD;&#xA;&#xD;&#xA;2. Using excel activity we have to format the estimated value column into currency type, then create pivot table and chart" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,767" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Data Manipulation - Workbook and DataTable Activity" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Data Manipulation - Workbook and DataTable Activity" sap:VirtualizedContainerService.HintSize="450,569" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_Production" />
       </Sequence.Variables>
@@ -111,6 +111,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="This activity isused to add data column to the data table.&#xD;&#xA;Using Column name to add the data column." ColumnName="Estimated Value" DataTable="[dt_Production]" DisplayName="Add Data Column - Estimated Value" sap:VirtualizedContainerService.HintSize="388,243" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:AddDataColumn>
     </Sequence>
   </Sequence>
 </Activity>
