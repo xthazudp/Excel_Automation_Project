@@ -87,23 +87,24 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="1. Using workbook and datatable activity new column for estimated value is added to the existing excel file.&#xD;&#xA;&#xD;&#xA;2. Using excel activity we have to format the estimated value column into currency type, then create pivot table and chart" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="634,1081" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="1. Using workbook and datatable activity new column for estimated value is added to the existing excel file.&#xD;&#xA;&#xD;&#xA;2. Using excel activity we have to format the estimated value column into currency type, then create pivot table and chart" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,432" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Data Manipulation - Workbook and DataTable Activity" sap:VirtualizedContainerService.HintSize="572,894" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Data Manipulation - Workbook and DataTable Activity" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_Production" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Contains three fields among which two are mandatory. Path Field and Sheet Name Field.&#xD;&#xA;&#xD;&#xA;The data from the data table is saved into dt_Production variable." DataTable="[dt_Production]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="510,165" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Tracker" WorkbookPath="VegetablesProduction.xlsx">
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Contains three fields among which two are mandatory. Path Field and Sheet Name Field.&#xD;&#xA;&#xD;&#xA;The data from the data table is saved into dt_Production variable." DataTable="[dt_Production]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,165" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Tracker" WorkbookPath="VegetablesProduction.xlsx">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -112,7 +113,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="This activity isused to add data column to the data table.&#xD;&#xA;Using Column name to add the data column." ColumnName="Estimated Value" DataTable="[dt_Production]" DisplayName="Add Data Column - Estimated Value" sap:VirtualizedContainerService.HintSize="510,117" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2">
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="This activity isused to add data column to the data table.&#xD;&#xA;Using Column name to add the data column." ColumnName="Estimated Value" DataTable="[dt_Production]" DisplayName="Add Data Column - Estimated Value" sap:VirtualizedContainerService.HintSize="388,117" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -121,7 +122,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataColumn>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Using tbhis activity each row in the dt_Production data table is iterated." DataTable="[dt_Production]" DisplayName="For Each Row in Production Data Table" sap:VirtualizedContainerService.HintSize="510,421" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Using tbhis activity each row in the dt_Production data table is iterated." DataTable="[dt_Production]" DisplayName="For Each Row in Production Data Table" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -152,11 +153,28 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="This activity is used to write updated data table to a new  sheet inside the excel." DataTable="[dt_Production]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Tracker_Updated" WorkbookPath="VegetablesProduction.xlsx">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteRange>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Using Excel Activity formating estimated value into currency then creating pivot table based on updated infromation from Data Manipulation and creating graph based on pivot table data." DisplayName="Data Format/Pivot_Table/Charts - Excel Activity" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </Sequence>
   </Sequence>
 </Activity>
