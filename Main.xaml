@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,514" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,1278" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -94,14 +94,14 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="1. Using workbook and datatable activity new column for estimated value is added to the existing excel file.&#xD;&#xA;&#xD;&#xA;2. Using excel activity we have to format the estimated value column into currency type, then create pivot table and chart" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="654,898" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="1. Using workbook and datatable activity new column for estimated value is added to the existing excel file.&#xA;&#xA;2. Using excel activity we have to format the estimated value column into currency type, then create pivot table and chart" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="704,1213" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Data Manipulation - Workbook and DataTable Activity" sap:VirtualizedContainerService.HintSize="592,25" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Data Manipulation - Workbook and DataTable Activity" sap:VirtualizedContainerService.HintSize="642,25" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_Production" />
       </Sequence.Variables>
@@ -111,7 +111,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Contains three fields among which two are mandatory. Path Field and Sheet Name Field.&#xD;&#xA;&#xD;&#xA;The data from the data table is saved into dt_Production variable." DataTable="[dt_Production]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,165" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Tracker" WorkbookPath="VegetablesProduction.xlsx">
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Contains three fields among which two are mandatory. Path Field and Sheet Name Field.&#xA;&#xA;The data from the data table is saved into dt_Production variable." DataTable="[dt_Production]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,165" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Tracker" WorkbookPath="VegetablesProduction.xlsx">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -120,7 +120,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="This activity isused to add data column to the data table.&#xD;&#xA;Using Column name to add the data column." ColumnName="Estimated Value" DataTable="[dt_Production]" DisplayName="Add Data Column - Estimated Value" sap:VirtualizedContainerService.HintSize="388,117" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2">
+      <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="This activity isused to add data column to the data table.&#xA;Using Column name to add the data column." ColumnName="Estimated Value" DataTable="[dt_Production]" DisplayName="Add Data Column - Estimated Value" sap:VirtualizedContainerService.HintSize="388,117" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -175,38 +175,38 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:WriteRange>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Using Excel Activity formating estimated value into currency then creating pivot table based on updated infromation from Data Manipulation and creating graph based on pivot table data." DisplayName="Data Format/Pivot_Table/Charts - Excel Activity" sap:VirtualizedContainerService.HintSize="592,646" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence sap2010:Annotation.AnnotationText="Using Excel Activity formating estimated value into currency then creating pivot table based on updated infromation from Data Manipulation and creating graph based on pivot table data." DisplayName="Data Format/Pivot_Table/Charts - Excel Activity" sap:VirtualizedContainerService.HintSize="642,980" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="530,491" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="580,827" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,404" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,740" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File - VegetablesProduction" sap:VirtualizedContainerService.HintSize="484,453" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="VegetablesProduction.xlsx">
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File - VegetablesProduction" sap:VirtualizedContainerService.HintSize="484,629" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="VegetablesProduction.xlsx">
                 <ueab:ExcelApplicationCard.Body>
                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="VegetablesProduction" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,180" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,360" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:FormatRangeX sap2010:Annotation.AnnotationText="Formating the &quot;Estimated Value&quot; column to currency and also adding the currency sign." DisplayName="Format Estimated Value column to currency" sap:VirtualizedContainerService.HintSize="388,69" sap2010:WorkflowViewState.IdRef="FormatRangeX_1" Range="[VegetablesProduction.Sheet(&quot;Tracker_Updated&quot;).Range(&quot;G:G&quot;)]">
+                      <ueab:FormatRangeX sap2010:Annotation.AnnotationText="Formating the &quot;Estimated Value&quot; column to currency and also adding the currency sign." DisplayName="Format Estimated Value column to currency" sap:VirtualizedContainerService.HintSize="388,67" sap2010:WorkflowViewState.IdRef="FormatRangeX_1" Range="[VegetablesProduction.Sheet(&quot;Tracker_Updated&quot;).Range(&quot;G:G&quot;)]">
                         <ueab:FormatRangeX.Alignment>
                           <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
                         </ueab:FormatRangeX.Alignment>
@@ -224,6 +224,30 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ueab:FormatRangeX>
+                      <ueab:CreatePivotTableXv2 sap2010:Annotation.AnnotationText="Creates a pivot table using &quot;Vendor Name&quot; and &quot;Production Month&quot; as rows, &quot;Storage Zone as a columns and &quot;Estimated Value&quot; as a value using the SUM function." DestinationRange="[VegetablesProduction.Sheet(&quot;PivotTable&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="388,142" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_1" LayoutRowType="Compact" Range="[VegetablesProduction.Sheet(&quot;Tracker_Updated&quot;)]" TableName="EstValue" ValuesMode="Columns">
+                        <ueab:CreatePivotTableXv2.Body>
+                          <ActivityAction>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field - Vendor Name As Row" FieldName="Vendor Name" Function="Sum" sap:VirtualizedContainerService.HintSize="382,85" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_1" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field - Production Months As Row" FieldName="Production Month" Function="Sum" sap:VirtualizedContainerService.HintSize="382,85" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_2" Type="Row" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field - Storage Zone As Column" FieldName="Storage Zone" Function="Sum" sap:VirtualizedContainerService.HintSize="382,85" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_3" Type="Column" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field - Estimated Value As Sum Of Value" FieldName="Estimated Value" Function="Sum" sap:VirtualizedContainerService.HintSize="382,85" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_4" Type="Value" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:CreatePivotTableXv2.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:CreatePivotTableXv2>
                     </Sequence>
                   </ActivityAction>
                 </ueab:ExcelApplicationCard.Body>
